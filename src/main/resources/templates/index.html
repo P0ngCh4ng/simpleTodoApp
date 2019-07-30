@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Todoリスト</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<header th:replace="_temp :: header"></header>
+
+  	<div><a th:href="@{/create}">新規登録はこちら</a></div>
+  	
+	 <th:block th:each="todo:${todos}" th:object="${todo}"> 
+      <div  style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+      <span th:text="*{todoName}">#name</span>
+      <span th:text="*{todoDeadline}">#until</span>
+     <a th:href="@{/{id}/edit(id=*{id})}">編集</a>
+      <div th:if="*{did}">
+      <span>完了済み</span></div>
+      <div th:unless="*{did}">
+      <span>未完了</span></div>
+     <div></div>
+     <form th:action="@{/{id}(id=*{id})}" th:method="delete">
+                <input type="submit" value="削除" />
+              </form>
+     </div>
+   	</th:block>
+	<div th:if="${NullCheck}">
+	<p>登録されたTodoはございません</p></div>
+</body>
+</html>

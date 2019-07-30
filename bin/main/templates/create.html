@@ -1,0 +1,19 @@
+   <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Todoリスト</title>　
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<header th:replace="_temp :: header"></header>
+  <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 10px;">
+  <form action="#" th:action="@{/confirm}"  method="post">
+	      <p>名前を入力: <input type="text" th:field="*{todoList.todoName}" /> </p>
+    	 <p>期限を設定: <input type="text" th:field="*{todoList.todoDeadline}" /></p>
+    <button type="submit">登録する</button>
+    </form>
+    
+   
+    </div>
+    </body>
+</html>
