@@ -1,4 +1,4 @@
-package com.app.todo.razio;
+package com.todo.domain.repositories;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.app.todo.razio.todoEntity;
+import com.todo.domain.models.todoEntity;
 
 @Repository
 public interface todoRepository extends JpaRepository<todoEntity, Long> {

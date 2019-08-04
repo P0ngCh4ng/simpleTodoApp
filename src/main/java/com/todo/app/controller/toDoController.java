@@ -1,4 +1,4 @@
-package com.app.todo.razio;
+package com.todo.app.controller;
 
 
 import java.util.List;
@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.app.todo.razio.todoService;
-import com.app.todo.razio.todoRepository;
+import com.todo.domain.services.todoService;
+import com.todo.domain.repositories.todoRepository;
+import com.todo.domain.models.todoEntity;
+import com.todo.domain.validations.todoList;
 
 @Controller
 public class toDoController {

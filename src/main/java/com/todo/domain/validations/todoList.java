@@ -1,4 +1,4 @@
-package com.app.todo.razio;
+package com.todo.domain.validations;
 
 public class todoList{
 	private long id;

@@ -1,9 +1,9 @@
-package com.app.todo.razio;
+package com.todo.domain.services;
 
 import org.springframework.stereotype.Service;
 
-import com.app.todo.razio.todoEntity;
-import com.app.todo.razio.todoList;
+import com.todo.domain.models.todoEntity;
+import com.todo.domain.validations.todoList;
 
 @Service
 public class todoService {

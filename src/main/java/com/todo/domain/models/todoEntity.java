@@ -1,4 +1,4 @@
-package com.app.todo.razio;
+package com.todo.domain.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
